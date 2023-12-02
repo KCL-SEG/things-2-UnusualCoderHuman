@@ -1,11 +1,14 @@
+
 <html>
 <head>
-  <title>Things</title>
+    <title>Home Page</title>
 </head>
 <body>
-  <h1>
-    Things
-  </h1>
-  <p>Some stuff about things goes here.</p>
+    <h1>Welcome to the Home Page</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  {# Render the form fields #}
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
